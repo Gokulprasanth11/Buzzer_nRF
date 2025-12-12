@@ -1,0 +1,13 @@
+# Target labels
+ buzzer_nrf54
+# Source files and their labels
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/CMakeFiles/buzzer_nrf54
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/CMakeFiles/buzzer_nrf54.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/CMakeFiles/buzzer_nrf54-complete.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-build.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-configure.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-download.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-install.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-mkdir.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-patch.rule
+C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-update.rule

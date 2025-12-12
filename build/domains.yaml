@@ -1,0 +1,7 @@
+default: buzzer_nrf54
+build_dir: C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build
+domains:
+  - name: buzzer_nrf54
+    build_dir: C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/buzzer_nrf54
+flash_order:
+  - buzzer_nrf54

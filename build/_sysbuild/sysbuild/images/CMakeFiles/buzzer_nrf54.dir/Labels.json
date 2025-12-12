@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/CMakeFiles/buzzer_nrf54"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/CMakeFiles/buzzer_nrf54.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/CMakeFiles/buzzer_nrf54-complete.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-build.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-configure.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-download.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-install.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-patch.rule"
+		},
+		{
+			"file" : "C:/Users/gokul_2rbw/OneDrive/Documents/Project/buzzer_nrf54/build/_sysbuild/sysbuild/images/buzzer_nrf54-prefix/src/buzzer_nrf54-stamp/buzzer_nrf54-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"buzzer_nrf54"
+		],
+		"name" : "buzzer_nrf54"
+	}
+}

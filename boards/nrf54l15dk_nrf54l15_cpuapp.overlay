@@ -1,0 +1,63 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* Disable all UART instances */
+&uart20 {
+    status = "disabled";
+};
+
+&uart21 {
+    status = "disabled";
+};
+
+&uart22 {
+    status = "disabled";
+};
+
+&uart30 {
+    status = "disabled";
+};
+
+/* Delete Button 2 alias and node to free P1.08 for PWM20 buzzer */
+/ {
+    aliases {
+        /delete-property/ sw2;
+    };
+};
+
+/delete-node/ &button2;
+
+/* PWM20 - Buzzer Control */
+&pwm20 {
+    status = "okay";
+    pinctrl-0 = <&pwm20_custom>;
+    pinctrl-1 = <&pwm20_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+
+/* Pin Control Configuration */
+&pinctrl {
+    /* PWM20 - Buzzer (P1.08) */
+    pwm20_custom: pwm20_custom {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 8)>;
+            nordic,drive-mode = <NRF_DRIVE_H0H1>;  /* High drive strength for better volume */
+        };
+    };
+    
+    pwm20_sleep: pwm20_sleep {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 8)>;
+            low-power-enable;
+        };
+    };
+};
+
+/* Buzzer client node using PWM20 ch 0 */
+/ {
+    zephyr,user {
+        pwms = <&pwm20 0 PWM_USEC(250) PWM_POLARITY_NORMAL>;
+    };
+};
+
