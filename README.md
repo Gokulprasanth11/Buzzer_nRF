@@ -6,7 +6,7 @@ A Zephyr RTOS application for the nRF54 development kit that plays musical melod
 
 ## 🎵 Features
 
-- **Musical Melody Playback**: Plays the "Jingle Bells" melody using PWM-controlled buzzer
+- **Musical Melody Playback**: Plays the "We Wish You a Merry Christmas" melody using PWM-controlled buzzer
 - **LED Synchronization**: LED at pin 2.00 blinks in sync with the music
 - **Multiple Note Support**: Full range of musical notes from B0 to C8
 - **Configurable Beeps**: Simple beep function with adjustable duty cycle
@@ -83,7 +83,7 @@ Device tree overlay is configured in `boards/nrf54l15dk_nrf54l15_cpuapp.overlay`
    - Note duration controls timing
 
 4. **Continuous Loop**:
-   - Plays Jingle Bells melody
+   - Plays We Wish You a Merry Christmas melody
    - Waits 2 seconds
    - Plays a simple beep
    - Waits 5 seconds before repeating
@@ -103,7 +103,7 @@ buzzer_nrf54/
 
 ## 🎯 Key Functions
 
-- `play_melody()`: Plays the complete Jingle Bells melody
+- `play_melody()`: Plays the complete We Wish You a Merry Christmas melody
 - `play_note()`: Plays a single note with specified frequency and duration
 - `simple_beep()`: Plays a simple beep sound
 - `led_on()` / `led_off()`: Control LED state
@@ -118,7 +118,7 @@ buzzer_nrf54/
 ## 🎬 Demo
 
 The application continuously plays:
-1. Jingle Bells melody with LED blinking
+1. We Wish You a Merry Christmas melody with LED blinking
 2. Brief pause
 3. Simple beep with LED flash
 4. Longer pause before repeating

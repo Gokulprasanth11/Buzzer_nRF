@@ -1,7 +1,3 @@
-/*
- * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
- */
-
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/pwm.h>
 #include <zephyr/drivers/gpio.h>
@@ -115,22 +111,33 @@ static const struct pwm_dt_spec buzzer_pwm =
 #define LED_PIN_NUM 0
 static const struct device *led_gpio_dev = DEVICE_DT_GET(DT_NODELABEL(gpio2));
 
-/* Jingle Bells melody */
-static const uint16_t jingle_bells_notes[] = {
-    NOTE_E4, NOTE_E4, NOTE_E4, NOTE_PAUSE,
-    NOTE_E4, NOTE_E4, NOTE_E4, NOTE_PAUSE,
-    NOTE_E4, NOTE_G4, NOTE_C4, NOTE_D4, NOTE_E4, NOTE_PAUSE,
-    NOTE_F4, NOTE_F4, NOTE_F4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_D4, NOTE_E4, NOTE_D4, NOTE_G4
+/* We Wish You a Merry Christmas melody */
+/* Based on Arduino Christmas Songs by Dipto Pratyaksa, modified by Joshi */
+static const uint16_t merry_christmas_notes[] = {
+    NOTE_B3,
+    NOTE_F4, NOTE_F4, NOTE_G4, NOTE_F4, NOTE_E4,
+    NOTE_D4, NOTE_D4, NOTE_D4,
+    NOTE_G4, NOTE_G4, NOTE_A4, NOTE_G4, NOTE_F4,
+    NOTE_E4, NOTE_E4, NOTE_E4,
+    NOTE_A4, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_G4,
+    NOTE_F4, NOTE_D4, NOTE_B3, NOTE_B3,
+    NOTE_D4, NOTE_G4, NOTE_E4,
+    NOTE_F4
 };
 
-static const uint16_t jingle_bells_durations[] = {
-    EIGHTH_NOTE, EIGHTH_NOTE, QUARTER_NOTE, EIGHTH_NOTE,
-    EIGHTH_NOTE, EIGHTH_NOTE, QUARTER_NOTE, EIGHTH_NOTE,
-    EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, HALF_NOTE, EIGHTH_NOTE,
-    EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, QUARTER_NOTE, QUARTER_NOTE
+static const uint16_t merry_christmas_durations[] = {
+    QUARTER_NOTE,        /* 4 */
+    QUARTER_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE,  /* 4, 8, 8, 8, 8 */
+    QUARTER_NOTE, QUARTER_NOTE, QUARTER_NOTE,  /* 4, 4, 4 */
+    QUARTER_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE,  /* 4, 8, 8, 8, 8 */
+    QUARTER_NOTE, QUARTER_NOTE, QUARTER_NOTE,  /* 4, 4, 4 */
+    QUARTER_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE, EIGHTH_NOTE,  /* 4, 8, 8, 8, 8 */
+    QUARTER_NOTE, QUARTER_NOTE, EIGHTH_NOTE, EIGHTH_NOTE,  /* 4, 4, 8, 8 */
+    QUARTER_NOTE, QUARTER_NOTE, QUARTER_NOTE,  /* 4, 4, 4 */
+    HALF_NOTE  /* 2 */
 };
 
-#define MELODY_SIZE (sizeof(jingle_bells_notes) / sizeof(jingle_bells_notes[0]))
+#define MELODY_SIZE (sizeof(merry_christmas_notes) / sizeof(merry_christmas_notes[0]))
 
 /* LED control functions */
 static void led_on(void)
@@ -184,10 +191,10 @@ static void play_note(uint16_t frequency, uint16_t duration_ms)
 /* Play melody */
 static void play_melody(void)
 {
-    LOG_INF("Playing Jingle Bells melody...");
+    LOG_INF("Playing We Wish You a Merry Christmas melody...");
     
     for (size_t i = 0; i < MELODY_SIZE; i++) {
-        play_note(jingle_bells_notes[i], jingle_bells_durations[i]);
+        play_note(merry_christmas_notes[i], merry_christmas_durations[i]);
     }
     
     LOG_INF("Melody finished");
