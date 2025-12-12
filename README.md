@@ -1,20 +1,19 @@
 # Buzzer nRF54 - Musical Buzzer with LED Synchronization
 
-A Zephyr RTOS application for the nRF54 development kit that plays musical melodies through a buzzer with synchronized LED blinking.
+A Zephyr RTOS application for the nRF54 development kit that plays "We Wish You a Merry Christmas" through a buzzer with synchronized LED blinking.
 
 ![Project Hardware](image.png)
 
 ## 🎵 Features
 
-- **Musical Melody Playback**: Plays the "We Wish You a Merry Christmas" melody using PWM-controlled buzzer
+- **Musical Melody Playback**: Plays "We Wish You a Merry Christmas" using PWM-controlled buzzer
 - **LED Synchronization**: LED at pin 2.00 blinks in sync with the music
-- **Multiple Note Support**: Full range of musical notes from B0 to C8
+- **Full Note Range**: Support for musical notes from B0 to C8 (8+ octaves)
 - **Configurable Beeps**: Simple beep function with adjustable duty cycle
 - **PWM Control**: Uses PWM20 for precise frequency control
 
 ## 🎹 Musical Capabilities
 
-The application supports a full range of musical notes:
 - **Octaves**: B0 through C8 (8+ octaves)
 - **Note Types**: Whole, half, quarter, eighth, and sixteenth notes
 - **Pauses**: Support for musical rests/pauses
@@ -83,7 +82,7 @@ Device tree overlay is configured in `boards/nrf54l15dk_nrf54l15_cpuapp.overlay`
    - Note duration controls timing
 
 4. **Continuous Loop**:
-   - Plays We Wish You a Merry Christmas melody
+   - Plays "We Wish You a Merry Christmas" melody
    - Waits 2 seconds
    - Plays a simple beep
    - Waits 5 seconds before repeating
@@ -98,12 +97,14 @@ buzzer_nrf54/
 │   └── nrf54l15dk_nrf54l15_cpuapp.overlay  # Device tree overlay
 ├── CMakeLists.txt          # Build configuration
 ├── prj.conf                # Zephyr configuration
+├── image.png               # Hardware setup image
+├── jingle_bells.mp4        # Demo video
 └── README.md              # This file
 ```
 
 ## 🎯 Key Functions
 
-- `play_melody()`: Plays the complete We Wish You a Merry Christmas melody
+- `play_melody()`: Plays the complete "We Wish You a Merry Christmas" melody
 - `play_note()`: Plays a single note with specified frequency and duration
 - `simple_beep()`: Plays a simple beep sound
 - `led_on()` / `led_off()`: Control LED state
@@ -118,16 +119,21 @@ buzzer_nrf54/
 ## 🎬 Demo
 
 The application continuously plays:
-1. We Wish You a Merry Christmas melody with LED blinking
-2. Brief pause
+1. "We Wish You a Merry Christmas" melody with LED blinking
+2. Brief pause (2 seconds)
 3. Simple beep with LED flash
-4. Longer pause before repeating
+4. Longer pause (5 seconds) before repeating
+
+📹 **[Watch Demo Video: jingle_bells.mp4](./jingle_bells.mp4)**
+
+*Click the link above to view the video. The video shows the buzzer playing the melody with the LED at pin 2.00 blinking in perfect synchronization.*
 
 ## 🔧 Troubleshooting
 
 - **No sound**: Check buzzer connection to P1.08
 - **LED not blinking**: Verify LED connection to P2.00
 - **Build errors**: Ensure Zephyr SDK and toolchain are properly installed
+- **Device not found**: Check USB connection and nRF Connect Programmer setup
 
 ## 📚 Resources
 
@@ -136,7 +142,10 @@ The application continuously plays:
 - [PWM Driver API](https://docs.zephyrproject.org/latest/hardware/peripherals/pwm.html)
 - [GPIO Driver API](https://docs.zephyrproject.org/latest/hardware/peripherals/gpio.html)
 
+## 📄 License
+
+This project is open source. Feel free to use and modify as needed.
+
 ---
 
 **Enjoy your musical buzzer with synchronized LED! 🎄🔔✨**
-
