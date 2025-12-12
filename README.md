@@ -2,6 +2,8 @@
 
 A Zephyr RTOS application for the nRF54 development kit that plays musical melodies through a buzzer with synchronized LED blinking.
 
+![Project Hardware](image.png)
+
 ## 🎵 Features
 
 - **Musical Melody Playback**: Plays the "Jingle Bells" melody using PWM-controlled buzzer
@@ -19,6 +21,8 @@ The application supports a full range of musical notes:
 - **Volume Control**: 90% duty cycle for maximum buzzer volume
 
 ## 🔌 Hardware Requirements
+
+![Hardware Setup](image.png)
 
 - **Board**: nRF54L15 Development Kit
 - **Buzzer**: Passive buzzer connected to PWM pin
@@ -118,14 +122,6 @@ The application continuously plays:
 2. Brief pause
 3. Simple beep with LED flash
 4. Longer pause before repeating
-
-### Video Demonstration
-
-Watch the buzzer in action with synchronized LED blinking:
-
-<video src="jingle_bells.mp4" controls width="640"></video>
-
-The video shows the buzzer playing the Jingle Bells melody with the LED at pin 2.00 blinking in perfect synchronization with the music.
 
 ## 🔧 Troubleshooting
 
